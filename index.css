@@ -1,0 +1,224 @@
+/* --- Variables y Estilos Generales --- */
+:root {
+    --gold-color: #D4AF37; /* Tono dorado, puedes ajustarlo */
+    --dark-bg: #1a1a1a;
+    --text-color: #f0f0f0;
+    --font-headings: 'Lora', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-headings);
+    font-weight: 700;
+}
+
+/* --- Header / Navegación --- */
+.header {
+    background-color: var(--dark-bg);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Ajusta el tamaño de tu logo */
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 25px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+    color: var(--gold-color);
+}
+
+/* --- Sección Principal (Hero) --- */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/urielcabellovega/images/refs/heads/main/c.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+}
+
+.cta-button {
+    background-color: var(--gold-color);
+    color: black;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #EACD69;
+    transform: translateY(-3px);
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#nosotros {
+    background-color: white;
+}
+
+#nosotros p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- Sección de Servicios --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    color: var(--gold-color);
+    margin-top: 0;
+}
+
+/* --- Sección de Contacto --- */
+#contacto {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    max-width: 300px;
+}
+
+.contact-item h4 {
+    font-size: 1.4em;
+    color: var(--gold-color);
+}
+
+.contact-item a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* --- Pie de Página (Footer) --- */
+.footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+    /* No filter needed for transparent png */
+}
+
+/* --- Responsividad para Móviles --- */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    .header nav ul {
+        margin-top: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
